@@ -74,10 +74,9 @@ b = get_int("Enter value for b: ")
 a, b = b, a
 print(f"After swapping: a={a}, b={b}")
 
-# 9. Floor division and remainder of 100/7
-floor_division = 100 // 7
-remainder = 100 % 7
-print(f"Floor division: {floor_division}, Remainder: {remainder}")
+# 9. Floor Division & Remainder
+# Calculate and print both results in a single print statement
+print(f"100 // 7 = {100 // 7}, 100 % 7 = {100 % 7}")
 
 # 10. Calculate age based on birth year
 birth_year = get_int("Enter your birth year: ")
