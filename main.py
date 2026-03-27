@@ -1,4 +1,9 @@
-# Created by Samuel Akudo
+"""
+Python Data Structures Assignment
+Author: Akudo Samuel
+Course: CIT2201
+Date: 27 March 2026
+"""
 
 # ===========================
 # Numeric Types Exercises
