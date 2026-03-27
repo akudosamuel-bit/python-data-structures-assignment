@@ -141,7 +141,7 @@ print(result_plus)  # Year 2 Semester
 print("Civil,Mechanical,Electrical".split(","))
 
 # 10. f-string
-code = "EMT1101"
+code = "CIT2201"
 unit = 3
 
 print(f"The course code is {code} and the unit is {unit}")
@@ -160,9 +160,16 @@ course_codes.insert(2, "Engineering")
 print(course_codes)
 
 # 3. Remove item
-course_codes.pop(2)
-course_codes.remove("ENG102")
-print(course_codes)
+# example list
+items = ["A", "B", "C", "D", "E"]
+
+# remove the 3rd element (index 2) safely
+try:
+    removed = items.pop(2)   # removes and returns the element at index 2
+    print("Removed with pop:", removed)
+    print("List after pop:", items)
+except IndexError:
+    print("List is too short to pop index 2.")
 
 # 4. Replace value
 nums = [10, 20, 30, 40, 50]
