@@ -141,7 +141,10 @@ print(result_plus)  # Year 2 Semester
 print("Civil,Mechanical,Electrical".split(","))
 
 # 10. f-string
-print(f"The course code is CS101 and the unit is 3")
+code = "EMT1101"
+unit = 3
+
+print(f"The course code is {code} and the unit is {unit}")
 
 # ===========================
 # List Exercises
