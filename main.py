@@ -2,6 +2,7 @@
 Python Data Structures Assignment
 Author: Akudo Samuel
 Course: CIT2201
+Instructor: Gabriel Ekodo
 Date: 27 March 2026
 """
 
@@ -191,7 +192,7 @@ nums[2] = 35
 print(nums)
 
 # 5. Sort names
-names = ["Alice", "Bob", "Charlie"]
+names = ["Samuel", "Gabriel", "Henry"]
 names.sort(reverse=True)
 print(names)
 
@@ -207,7 +208,7 @@ values = [5, 10, 3, 8, 2]
 print(max(values), min(values))
 
 # 9. Combine lists
-print([1, 2] + [3, 4])
+print([1, 2, 3] + [4, 5,6])
 
 # 10. Clear list
 temp = [1, 2, 3]
@@ -250,8 +251,15 @@ print(merged)
 print(merged.get("z", "Key not found"))
 
 # 10. Second dictionary name
-courses_list = [{"name": "CS"}, {"name": "Math"}, {"name": "Physics"}]
-print(courses_list[1]["name"])
+courses = [
+    {"code": "EMT1101", "name": "Mathematics I", "CU": 3},
+    {"code": "ENG1101", "name": "Communication Skills", "CU": 2},
+    {"code": "ELE1201", "name": "Basic Electronics", "CU": 3},
+]
+
+# Print the "name" field of the second dictionary (index 1)
+print(courses[1]["name"])
+
 
 # ===========================
 # Tuples and Sets Exercises
@@ -265,23 +273,34 @@ except TypeError:
     print("Tuples are immutable")
 
 # 2. Unpack tuple
-student_id, code = (101, "EMT")
-print(student_id, code)
+id, code = (101, "EMT")
+print(id, code)
 
 # 3. List to set
-print(set([1, 2, 2, 3]))
+print(set([1, 2, 2, 3, 4, 4]))
 
 # 4. Union
-print({1, 2} | {2, 3})
+print({1, 2, 4} | {2, 3, 5})
 
 # 5. Intersection
-print({1, 2} & {2, 3})
+# two sets of student IDs
+group_a = {101, 102, 103, 110}
+group_b = {104, 110, 115, 102}
+
+# method 1: using intersection()
+common = group_a.intersection(group_b)
+print("Common IDs:", common)
+
+# method 2: using & operator
+common2 = group_a & group_b
+print("Common IDs (using &):", common2)
+
 
 # 6. Subset
 print({1, 2}.issubset({1, 2, 3}))
 
 # 7. Tuple length
-print(len((1,2,3,4,5,6,7,8,9,10)))
+print(len((1.4, 2.3, 3.2, 4.0, 5.5, 6.4, 7.3, 8.2, 9.1, 10.0)))
 
 # 8. Modify tuple
 t2 = (1, 2, 3)
@@ -293,7 +312,19 @@ print(tuple(temp))
 print(set("MISSISSIPPI"))
 
 # 10. Frozenset
-print(frozenset([1, 2, 3]))
+# create a frozenset from an iterable
+fs = frozenset([101, 102, 103])
+print("frozenset:", fs)
+
+# set operations still work (return new sets/frozensets)
+a = frozenset([101, 102, 103])
+b = frozenset([102, 104])
+print("intersection:", a & b)        # frozenset({102})
+print("union:", a | b)               # frozenset({101,102,103,104})
+
+# because frozensets are hashable, they can be used as dict keys
+d = {a: "group A"}
+print("dict lookup:", d[a])
 
 # ===========================
 # Advanced Nested Data Structures
@@ -333,7 +364,7 @@ print([item["year"] for item in courses_data])
 
 # 7. Filter courses
 for item in courses_data:
-    if len(item["courses"]) > 1:
+    if len(item["courses"]) > 5:
         print(item["year"], item["sem"])
 
 # 8. Parse courses
