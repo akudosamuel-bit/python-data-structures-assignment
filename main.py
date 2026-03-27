@@ -1,16 +1,10 @@
 ```python
 #!/usr/bin/env python3
 """
-main.py — Improved Python Data Structures Exercises (single-file, runnable)
 
 Name: Akudo Samuel
 Date: 27 March 2026
 
-Notes:
-- Uses the original pi value from the assignment: PI = 3.14159 (intentionally unchanged).
-- Input helpers validate user input and handle interruptions.
-- Functions are non-destructive where sensible and include docstrings.
-- CLI supports listing demos, running a demo, running all demos, or an interactive session.
 """
 
 from typing import Any, List, Dict, Tuple, Optional
