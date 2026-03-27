@@ -171,6 +171,20 @@ try:
 except IndexError:
     print("List is too short to pop index 2.")
 
+# example list (reset to original)
+items = ["A", "B", "C", "D", "E"]
+
+# remove the 3rd element by value (first find it, then remove)
+try:
+    value_to_remove = items[2]   # get the third element safely
+    items.remove(value_to_remove)  # remove the first occurrence of that value
+    print("Removed with remove():", value_to_remove)
+    print("List after remove():", items)
+except IndexError:
+    print("List is too short to access index 2.")
+except ValueError:
+    print("Value not found in list when attempting remove().")
+
 # 4. Replace value
 nums = [10, 20, 30, 40, 50]
 nums[2] = 35
