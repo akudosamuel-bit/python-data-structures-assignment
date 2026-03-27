@@ -120,7 +120,22 @@ else:
     print("Not a palindrome.")
 
 # 8. Concatenate
-print("Year 2 Semester")
+a = "Year"
+b = "2"
+c = "Semester"
+
+# Method 1: f-string (recommended)
+result_f = f"{a} {b} {c}"
+print(result_f)  # Year 2 Semester
+
+# Method 2: join
+result_join = " ".join([a, b, c])
+print(result_join)  # Year 2 Semester
+
+# Method 3: concatenation with +
+result_plus = a + " " + b + " " + c
+print(result_plus)  # Year 2 Semester
+
 
 # 9. Split String
 print("Civil,Mechanical,Electrical".split(","))
