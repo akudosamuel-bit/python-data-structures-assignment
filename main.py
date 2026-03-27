@@ -1,5 +1,5 @@
 """
-Python Data Structures Assignment (Improved)
+Python Data Structures Assignment
 Author: Akudo Samuel
 Course: CIT2201
 Date: 27 March 2026
