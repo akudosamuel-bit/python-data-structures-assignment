@@ -31,7 +31,7 @@ else:
     print(f"{number_input} is odd")
 
 # 4. Calculate 2^10 without pow()
-result_power = 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2
+result_power = 2 ** 10
 print(f"2^10 is: {result_power}")
 
 # 5. Take two float inputs and display only the integer part of their sum
