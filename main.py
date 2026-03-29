@@ -32,8 +32,9 @@ def get_float(prompt):
 # ===========================
 
 # 1. Calculate the area of a circle given a radius
+PI = 3.14159
 radius = get_float("Enter radius: ")
-area_circle = math.pi * (radius ** 2)
+area_circle = PI * (radius ** 2)
 print(f"Area of circle: {area_circle:.2f}")
 
 # 2. Convert Celsius to Fahrenheit
